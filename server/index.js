@@ -25,6 +25,7 @@ app.use(express.static(path.resolve(__dirname, './build')))
 
 // Serve images
 app.use('/uploads', express.static('./upload'))
+app.use('/manualupload', express.static(path.resolve(__dirname, './public/index.html')))
 
 // Serve list of images
 app.get('/uploads', (req, res) => {
